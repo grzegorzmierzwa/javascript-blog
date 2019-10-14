@@ -45,6 +45,62 @@ const titleClickHandler = function (event) {
 
 }
 
+{
+  const optArticleSelector = '.post',
+    optTitleSelector = '.post-title',
+    optTitleListSelector = '.titles';
+
+
+  function generateTitleLinks() {
+    console.log('Test!');
+    const element = this;
+
+    /* remove contents of titleList */
+
+    const titleList = document.querySelector(optTitleListSelector);
+
+    titleList.innerHTML = '';
+
+    /* for each article */
+
+    let html = '';
+
+    const articles = document.querySelectorAll(optArticleSelector);
+
+    for (let article of articles) {
+      console.log(article);
+      
+      /* get the article id */
+
+      const articleId = article.getAttribute('id');
+      console.log('id: ' + articleId);
+
+      /* find the title element */
+      /* get title from the title element */
+
+      const articleTitle = article.querySelector(optTitleSelector).innerHTML;
+      console.log(articleTitle);
+
+      /* create HTML of the link */
+
+      const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+      console.log('HTML element: ' + linkHTML);
+
+      /* insert link into titleList */
+
+      /* titleList.insertAdjacentHTML('beforeend', linkHTML); */
+      html = html + linkHTML;
+
+      /* console.log(html); */
+    }
+
+    titleList.innerHTML = html;
+  }
+
+  generateTitleLinks();
+
+}
+
 const links = document.querySelectorAll('.titles a');
 
 for (let link of links) {
