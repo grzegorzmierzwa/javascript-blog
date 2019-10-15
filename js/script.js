@@ -69,7 +69,7 @@ const titleClickHandler = function (event) {
 
     for (let article of articles) {
       console.log(article);
-      
+
       /* get the article id */
 
       const articleId = article.getAttribute('id');
