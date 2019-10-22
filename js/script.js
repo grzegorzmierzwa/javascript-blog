@@ -309,7 +309,7 @@ function authorClickHandler(event){
   }
   
   /* execute function "generateTitleLinks" with article selector as argument */
-  generateTitleLinks('[data-authors~="' + author + '"]');
+  generateTitleLinks('[data-authors="' + author + '"]');
 
 }
 
