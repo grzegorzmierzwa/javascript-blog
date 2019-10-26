@@ -121,3 +121,36 @@ body {
     margin: 0 10px 0 0;
   }
 }
+
+/* Left columne */
+
+.sidebar {
+  .tags, .authors {
+    display: inline-flex;
+    .element-size-1 {
+      font-size: 50%;
+      color: #8f8f8f;
+      padding: 5px;
+    }
+    .element-size-2 {
+      font-size: 80%;
+      color: #757575;
+      padding: 5px;
+    }
+    .element-size-3 {
+      font-size: 120%;
+      color: #636363;
+      padding: 5px;
+    }
+    .element-size-4 {
+      font-size: 160%;
+      color: #4d4d4d;
+      padding: 5px;
+    }
+    .element-size-5 {
+      font-size: 200%;
+      color: #2e2e2e;
+      padding: 5px;
+    }
+  }
+}
